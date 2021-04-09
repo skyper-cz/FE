@@ -53,7 +53,13 @@ FE styles - Janko
   * Jestli vše zatím funguje jak má
 
 **Stage 6**
-* Move projektu na jednotlivé repa
-* Login a register - Mikoláš + Láďa help
-* Backend pochutina a ghetování dat z BE (profily) - Janko
-* Fabián bude psychicky podporovat (asi)
+* [ ] Dodělat věci z Stage 5
+* [ ] Move projektu na jednotlivé repa
+* [ ] Login | Register - Láďa a Mikoláš
+  * přestěhování záložek - přesun na Search
+  * Vytvoření loginu - login.component
+  * Ověřování loginu - zda je uživatel přihlášený BE
+* [ ] profil záložka - Janko
+  * Profil přihlášeného uživatele
+  * možnost upravit jeho informace
+* [ ] Fabián bude psychicky podporovat (asi)
