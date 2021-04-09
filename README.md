@@ -53,6 +53,7 @@ FE styles - Janko
   * Jestli vše zatím funguje jak má
 
 **Stage 6**
+* DFodělat věci z Stage 5
 * Move projektu na jednotlivé repa
 * Login a register - Mikoláš + Láďa help
 * Backend pochutina a ghetování dat z BE (profily) - Janko
