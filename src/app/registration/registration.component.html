@@ -1,0 +1,50 @@
+<div id="reg_frame">
+  <h1>Registrace</h1>
+  <hr>
+
+    <form #form="ngForm">
+      <label for="inputNick">Nickname</label><br>
+      <input name="nickname" [(ngModel)]="username" type="text" required minlength="3" maxlength="10"
+             #UzivatelskeJmenoEl="ngModel" id="inputNick" placeholder="Nickname">
+      <!--<div *ngIf="UzivatelskeJmenoEl.touched">
+        <p *ngIf="UzivatelskeJmenoEl.errors.minlength">Jméno je moc krátké</p>
+        <p *ngIf="UzivatelskeJmenoEl.errors.maxlength">Jméno je moc dlouhé</p>
+      </div>-->
+      <br>
+      <br>
+      <label for="inputPassword">Heslo</label><br>
+      <input name="password" [(ngModel)]="heslo" type="password" required minlength="5" maxlength="30"
+             #HesloEl="ngModel" id="inputPassword" class="form-control"
+             placeholder="Password">
+      <!--<div *ngIf="HesloEl.touched">
+        <p *ngIf="HesloEl.errors.minlength">Heslo je moc krátké</p>
+        <p *ngIf="HesloEl.errors.maxlength">Heslo je moc dlouhé</p>
+      </div>-->
+      <br>
+      <br>
+
+      <label for="inputPassword">Jméno, příjmení</label>
+      <br>
+      <input name="jmeno" [(ngModel)]="name" type="text" placeholder="">
+      <br>
+      <br>
+
+      <label for="inputPassword">Popis</label>
+      <br>
+      <input name="password" [(ngModel)]="popis" type="text">
+      <br>
+      <br>
+
+      <label for="inputPassword">skills</label>
+      <br>
+      <input name="password" [(ngModel)]="skills" type="text">
+      <div>
+        <button [disabled]="form.invalid" (click)="VytvoritUzivatele()" type="submit">
+          Registrovat
+        </button>
+      </div>
+  </form>
+</div>
+<div *ngIf="Prijmuto">
+
+</div>

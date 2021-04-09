@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+label {font-family: 'Open Sans', sans-serif;}
+
+#navbar_list {
+  display: flex;
+  margin: 0px 60px;
+  padding: 0;
+}
+
+#navbar_list li {
+  display: inline;
+  padding: 8px 0px;
+  background: #c9c9c9;
+  font-size: 26px;
+
+}
+
+#navbar_list li a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  padding: 0px 10px;
+}
+
+
+#navbar_list .navbar_st :hover {
+  border-radius: 10px 0px 0px 10px;
+  color: #d42a2a;
+  background: #d42a2a;
+}
+
+#navbar_list .navbar_en :hover {
+  border-radius: 0px 10px 10px 0px;
+  color: #d42a2a;
+  background: #d42a2a;
+}
+
+#navbar_list .navbar_st {
+  background: #d42a2a;
+  border-radius: 10px 0px 0px 10px
+}
+
+#navbar_list .navbar_en {
+  background: #d42a2a;
+  border-radius: 0px 10px 10px 0px
+}
+
+#navbar_list .navbar_st a {
+  color: #d42a2a;
+  background: #d42a2a;
+  user-select: none;
+}
+
+#navbar_list .navbar_en a {
+  color: #d42a2a;
+  background: #d42a2a;
+  user-select: none;
+}
+
+#navbar_list .navbar_mid a {
+  width: 100%;
+  color: #c9c9c9;
+  background: #c9c9c9;
+  user-select: none;
+}
+
+#navbar_list .navbar_mid {
+  flex-grow: 1;
+}
+
+#navbar_list .navbar_search  {
+  padding-right: 10px;
+}
+
+#clearfix {
+  margin: auto;
+  width: 85%;
+  box-shadow: 5px 5px 10px #000;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-control {
+  margin: 0px 20px;
+  box-shadow: none;
+}
+
+#clearfix h2 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#clearfix hr {
+  margin: 0px 20px;
+}
+
+#clearfix p {
+  font-size: 130%;
+  font-family: 'Open Sans', sans-serif;
+}
+form {
+  display: block;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.ram {
+  background-image: radial-gradient(white,lightblue,blue);
+  width: 500px;
+  height: auto;
+  margin: 50px auto;
+  margin-top: 15%;
+  padding: 1px;
+  border: 2px double black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black inset;
+}
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+

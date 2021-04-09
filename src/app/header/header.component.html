@@ -1,0 +1,20 @@
+<body>
+<ul id="navbar_list">
+  <li class="navbar_st"><a style="visibility: hidden">||||</a></li>
+  <li *ngFor="let item of menu | keyvalue">
+    <a routerLink="/{{item.key}}">{{item.value}}</a>
+  </li>
+  <li class="navbar_mid"><a style="display: none">...</a></li>
+  <li>
+    <form style="margin: 0px 20px" autocomplete="off">
+      <input list="components" name="browser" id="browser" placeholder="Enter Keyword" (change)="print('ahoj')">
+      <datalist id="components">
+        <option *ngFor="let item of menu | keyvalue" value="{{item.value}}" >
+      </datalist>
+    </form>
+  </li>
+  <li class="navbar_en"><a>|</a></li>
+</ul>
+
+</body>
+<router-outlet></router-outlet>

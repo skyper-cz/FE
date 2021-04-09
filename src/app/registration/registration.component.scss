@@ -1,0 +1,34 @@
+#reg_frame {
+  width: 30%;
+  height: 50vh;
+  background: #f3f3f3;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10%;
+  box-shadow: 2px 2px 5px #1a1a1a;
+}
+
+#reg_frame h1 {
+  margin: 0px 0px;
+}
+
+#reg_frame hr {
+  margin-bottom: 20px;
+}
+
+#reg_frame input {
+  margin: 5px 0px;
+  border: none;
+  border-bottom: 1px solid #222222;
+  background-color: #f3f3f3;
+}
+
+#reg_frame input:focus {
+  border-bottom: 1px solid #1b6bd4;
+  background-color: #f3f3f3;
+  outline: none;
+}
+#reg_frame button {
+  width: 25%;
+  height: 30px;
+}
