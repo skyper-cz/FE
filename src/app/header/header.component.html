@@ -1,4 +1,12 @@
 <body>
+<div *ngIf="user == null" id="login_register">
+  <a routerLink="Login">Log in</a><p>  |  </p><a routerLink="Registrace">Register</a>
+</div>
+
+<div *ngIf="user != null" id="profile_hotbar">
+  <a><p>{{user}}</p></a>
+</div>
+
 <ul id="navbar_list">
   <li class="navbar_st"><a style="visibility: hidden">||||</a></li>
   <li *ngFor="let item of menu | keyvalue">

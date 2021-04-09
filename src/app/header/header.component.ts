@@ -8,6 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() menu = {};
+  user: any;
+  // @ts-ignore
 
   constructor() { }
 

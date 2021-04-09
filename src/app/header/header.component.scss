@@ -3,3 +3,34 @@
   height: auto;
   font-size: 85%;
 }
+
+#login_register {
+  text-align: right;
+  padding: 0px 80px;
+}
+
+#login_register a {
+  display: inline-block;
+  text-decoration: none;
+  color: #222222;
+}
+
+#login_register a:hover {
+  color: #1660cd;
+}
+
+#login_register p {
+  display: inline-block;
+  padding: 0px 10px;
+}
+#profile_hotbar {
+  text-align: right;
+  padding: 0px 80px;
+}
+
+#profile_hotbar a {
+  display: inline-block;
+  color: #222222;
+  text-decoration: none;
+  padding: 0px 10px;
+}
