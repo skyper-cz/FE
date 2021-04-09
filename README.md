@@ -1,27 +1,57 @@
-# FE
+Toto je pololetní projekt s FE Angularem a BE JavaEE.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+Stage 1
 
-## Development server
+FE:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    Psychická podpora - Fabian
+    Homepage - Mikoláš - co bude na Homepage?
+    Portfolio uživatele - editovatelné - Janko
+    Vyhledávání - Láďa
 
-## Code scaffolding
+Stage 2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Psychická podpora - Fabian
+    Dočasné ukládání portfolia - Janko
+    načítání portfolia
+    přidávání uživatelů
 
-## Build
+Stage 3
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    Psychická podpora - Fabian
+    Komunikace BE a FE - Láďa
+        Posílání a příjmání http komunikace u registrace a u post editu
+    Ukládání obsahu portfolia a uživatelů na BE - Janko
+        CRUD operace
+        GET - pošle údaje (zobrazí obsah všech položek uživatele)
+        PUT - upráví údaje v položce
+        POST - vytvoří účet
+        DELETE - smaže uživatele
+    Homepage layout, remake registrační komponenty, user page - Mikoláš
 
-## Running unit tests
+Stage 4
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Psychická podpora - Fabian
+    Komunikace BE a FE - Láďa
+        Posílání a příjmání http komunikace u registrace a u post editu
+    Ukládání obsahu portfolia a uživatelů na BE - Janko
+        CRUD operace
+        GET - pošle údaje (zobrazí obsah všech položek uživatele)
+        PUT - upráví údaje v položce
+        POST - vytvoří účet
+        DELETE - smaže uživatele
+    Oprava gitignorů - Mikoláš
+    FE styles - Janko
 
-## Running end-to-end tests
+Stage 5
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    Psychická podpora - Fabian
+    Login | Register - Láďa a Mikoláš
+        přestěhování záložek - přesun na Search
+        Vytvoření loginu - login.component
+        Ověřování loginu - zda je uživatel přihlášený BE
+    profil záložka - Janko
+        Profil přihlášeného uživatele
+        možnost upravit jeho informace
+    testy
+        Jestli vše zatím funguje jak má
