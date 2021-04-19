@@ -1,60 +1,19 @@
-<div class="container">
-  <div class="main-wrapper">
-    <div class="panel1">
-      <div class="about-me">
-        <div class="main-text">About</div>
-        <ul *ngFor="let info of userData">
-          <li *ngIf="!isEditing">
-            {{info}}
-          </li>
-        </ul>
-        <label class="input-sizer stacked" *ngIf="isEditing">
-          <textarea class="text_box" [(ngModel)]="text" oninput="this.parentNode.dataset.value = this.value"
-                    rows="1"></textarea>
-        </label>
-      </div>
-      <div class="experience">
-        <div class="main-text">Experience</div>
-        <ul *ngFor="let info2 of userExperience">
-          <li *ngIf="!isEditing">
-            {{info2}}
-          </li>
-        </ul>
-        <label class="input-sizer stacked" *ngIf="isEditing">
-          <textarea class="text_box" [(ngModel)]="text2" oninput="this.parentNode.dataset.value = this.value"
-                    rows="1"></textarea>
-        </label>
-      </div>
-      <div class="skills">
-        <div class="main-text">Skills</div>
-        <div *ngFor="let info of userSkills">{{info}}</div>
-      </div>
-      <label class="input-sizer stacked" *ngIf="isEditing">
-        <textarea class="text_box" [(ngModel)]="text3" oninput="this.parentNode.dataset.value = this.value"
-                  rows="1"></textarea>
-      </label>
+<div id="clearfix">
+  <h1>Uživatelé</h1>
+  <hr>
+  <div class="user-card" *ngFor="let user of users">
+    <div class="user-profile-img">
+      <h2>{{user.name.charAt(0)}}</h2>
     </div>
-    <div class="edit">
-      <button *ngIf="isEditing" (click)="addUserData()">SUBMIT</button>
-      <button *ngIf="!isEditing" (click)="this.isEditing = !this.isEditing;">EDIT</button>
+    <div class="user-info-primal">
+      <p>{{user.nick}}</p>
+      <p>{{user.name}}</p>
+      <p>{{user.age}}</p>
     </div>
-  </div>
-  <div class="panel2">
+    <div class="user-info-secondary">
+      <p>{{user.experience}}</p>
+      <p>{{user.skills}}</p>
+    </div>
 
   </div>
 </div>
-
-
-<script>
-  Array.from(document.querySelectorAll('[data-expand]'), (input) => {
-    let parent = input.parentNode;
-
-    function updateSize() {
-      parent.dataset.value = input.value
-    }
-
-    input.addEventListener('input', updateSize);
-    updateSize();
-  });
-</script>
-<!-- komentáář -->

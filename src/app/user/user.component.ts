@@ -1,5 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import {UserData} from './UserData';
+import {Component, OnInit} from '@angular/core';
+
+//import {UserData} from './UserData';
+
+interface UserData {
+  nick: string;
+  name: string;
+  age: number;
+  experience: string;
+  skills: string;
+
+
+}
 
 @Component({
   selector: 'app-user',
@@ -9,13 +20,11 @@ import {UserData} from './UserData';
 export class UserComponent implements OnInit {
 
   myMap: Map<number, string> = new Map();
-  text;
-  text2;
-  text3;
-  isEditing = false;
-  userData: string[] = [];
-  userExperience: string[] = [];
-  userSkills: string[] = [];
+  users: UserData[] = [
+    {nick: "Monareccio", name: "Martin Macura", age: 23, skills: "Umí skvěle spamovat lidi v discordu\n hraje warthuinder a lolko", experience: "ANgular"},
+    {nick: "Spermious Sam", name: "Spamuel Codytech", age: 22, skills: "Top messenger spammer a ignorer", experience: "webíky a bložísky"},
+
+  ];
 
   constructor() {
     /*this.myMap = new Map();*/
@@ -25,12 +34,13 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUserData(): void{
-    this.isEditing = !this.isEditing;
-    console.log(this.text);
-    this.userData = this.text.split('\n');
-    this.userExperience = this.text2.split('\n');
-    this.userSkills = this.text3.split('\n');
-  }
+  /*
+    addUserData(): void{
+      this.isEditing = !this.isEditing;
+      console.log(this.text);
+      this.userData = this.text.split('\n');
+      this.userExperience = this.text2.split('\n');
+      this.userSkills = this.text3.split('\n');
+    }*/
 
 }
