@@ -1,4 +1,5 @@
 #reg_frame {
+  position: relative;
   width: 30%;
   min-height: 50vh;
   background: #f3f3f3;
@@ -31,4 +32,10 @@
 #reg_frame button {
   width: 25%;
   height: 30px;
+}
+
+.right-inputs {
+  position: absolute;
+  left: 50%;
+  top: 13%;
 }
