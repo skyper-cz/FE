@@ -1,34 +1,24 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {observable, Observable, of} from 'rxjs';
+import {UserData} from './user/UserData';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  users: UserData[] = [
+    {nick: "Monareccio", name: "Martin Macura", age: 23, skills: "Umí skvěle spamovat lidi v discordu\n hraje warthuinder a lolko", description: "ANgular"},
+    {nick: "Spermious Sam", name: "Spamuel Codytech", age: 22, skills: "Top messenger spammer a ignorer", description: "webíky a bložísky"},
+  ];
 
-  constructor(private httpClient: HttpClient) {
+  getUsers(): Observable<UserData[]> {
+    return of(this.users);
   }
-  HttpPostRegistrace(username: string, heslo: string, name: string, popis: string, skills: string): Observable<any> {
-    return this.httpClient.post('http://127.0.0.1:8080/BE/UserApi/users/create', {
-      username,
-      heslo,
-      name,
-      popis,
-      skills
-    });
-  }
-  HttpPostAPozadavek(UzivatelskeJmeno: string, Heslo: string): Observable<any> {
-    return this.httpClient.post('', {
-      UzivatelskeJmeno,
-      Heslo
-    });
-  }
-  HttpGetPozadavek(UzivatelskeJmeno: string, Heslo: string): Observable<any> {
-    return this.httpClient.post('', {
-      UzivatelskeJmeno,
-      Heslo
-    });
+
+  registerUser(user: UserData): Observable<void> {
+    this.users.push(user);
+    return of();
   }
 }
 

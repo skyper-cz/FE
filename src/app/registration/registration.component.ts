@@ -9,21 +9,19 @@ import {UserService} from '../user.service';
 export class RegistrationComponent {
   title = 'Register';
 
-  username = '';
+  nickname = '';
   heslo = '';
   name = '';
-  popis = '';
+  age: number;
+  description = '';
   skills = '';
-
   Prijmuto = false;
 
 
   constructor(private apiService: UserService) {
   }
 
-  VytvoritUzivatele(): void {
-    this.apiService.HttpPostRegistrace(this.username, this.heslo, this.name, this.popis, this.skills).subscribe(() => {
-      this.Prijmuto = true;
-    });
+  createUser(): void {
+    this.apiService.registerUser({name: this.name, nick: this.nickname, age: this.age, description: this.description, skills: this.skills});
   }
 }

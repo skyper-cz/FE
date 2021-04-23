@@ -4,7 +4,7 @@
 
   <form #form="ngForm">
     <label for="inputNick">Nickname</label><br>
-    <input name="nickname" [(ngModel)]="username" type="text" required minlength="3" maxlength="10"
+    <input name="nickname" [(ngModel)]="nickname" type="text" required minlength="3" maxlength="10"
            #UzivatelskeJmenoEl="ngModel" id="inputNick" placeholder="Nickname">
     <div [hidden]="UzivatelskeJmenoEl.valid || UzivatelskeJmenoEl.pristine" class="alert alert-danger">
       <p *ngIf="UzivatelskeJmenoEl.errors != null && UzivatelskeJmenoEl.errors.minlength">Jméno je moc krátké</p>
@@ -44,8 +44,8 @@
       <label for="inputPassword">Popis</label>
       <br>
 
-      <input name="popis" [(ngModel)]="popis" type="popis" required minlength="5" maxlength="30"
-             #PopisEl="ngModel" id="inputPopis" class="form-control"
+      <input name="description" [(ngModel)]="description" type="description" required minlength="5" maxlength="50"
+             #PopisEl="ngModel" id="inputDescription" class="form-control"
              placeholder="Popis">
       <div [hidden]="PopisEl.valid || PopisEl.pristine" class="alert alert-danger">
         <p *ngIf="PopisEl.errors != null && PopisEl.errors.minlength">Heslo je moc krátké</p>
@@ -68,7 +68,7 @@
       </div>
     </div>
     <div>
-      <button [disabled]="form.invalid" (click)="VytvoritUzivatele()" type="submit">
+      <button [disabled]="form.invalid" (click)="createUser()" type="submit">
         Registrovat
       </button>
     </div>
