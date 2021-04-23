@@ -1,48 +1,77 @@
 <div id="reg_frame">
   <h1>Registrace</h1>
-  <hr>
 
-    <form #form="ngForm">
-      <label for="inputNick">Nickname</label><br>
-      <input name="nickname" [(ngModel)]="username" type="text" required minlength="3" maxlength="10"
-             #UzivatelskeJmenoEl="ngModel" id="inputNick" placeholder="Nickname">
-      <!--<div *ngIf="UzivatelskeJmenoEl.touched">
-        <p *ngIf="UzivatelskeJmenoEl.errors.minlength">Jméno je moc krátké</p>
-        <p *ngIf="UzivatelskeJmenoEl.errors.maxlength">Jméno je moc dlouhé</p>
-      </div>-->
+
+  <form #form="ngForm">
+    <label for="inputNick">Nickname</label><br>
+    <input name="nickname" [(ngModel)]="username" type="text" required minlength="3" maxlength="10"
+           #UzivatelskeJmenoEl="ngModel" id="inputNick" placeholder="Nickname">
+    <div [hidden]="UzivatelskeJmenoEl.valid || UzivatelskeJmenoEl.pristine" class="alert alert-danger">
+      <p *ngIf="UzivatelskeJmenoEl.errors != null && UzivatelskeJmenoEl.errors.minlength">Jméno je moc krátké</p>
+      <p *ngIf="UzivatelskeJmenoEl.errors != null && UzivatelskeJmenoEl.errors.maxlength">Jméno je moc dlouhé</p>
+    </div>
+    <br>
+    <br>
+    <div>
+      <label for="inputPassword">Heslo</label>
       <br>
-      <br>
-      <label for="inputPassword">Heslo</label><br>
+
       <input name="password" [(ngModel)]="heslo" type="password" required minlength="5" maxlength="30"
              #HesloEl="ngModel" id="inputPassword" class="form-control"
              placeholder="Password">
-      <!--<div *ngIf="HesloEl.touched">
-        <p *ngIf="HesloEl.errors.minlength">Heslo je moc krátké</p>
-        <p *ngIf="HesloEl.errors.maxlength">Heslo je moc dlouhé</p>
-      </div>-->
-      <br>
-      <br>
+      <div [hidden]="HesloEl.valid || HesloEl.pristine" class="alert alert-danger">
+        <p *ngIf="HesloEl.errors != null && HesloEl.errors.minlength">Heslo je moc krátké</p>
+        <p *ngIf="HesloEl.errors != null && HesloEl.errors.maxlength">Heslo je moc dlouhé</p>
+      </div>
+    </div>
+    <br>
+    <br>
 
+    <div>
       <label for="inputPassword">Jméno, příjmení</label>
       <br>
-      <input name="jmeno" [(ngModel)]="name" type="text" placeholder="">
-      <br>
-      <br>
 
+      <input name="name" [(ngModel)]="name" type="name" required minlength="5" maxlength="30"
+             #NameEl="ngModel" id="inputName" class="form-control"
+             placeholder="Jméno, příjmení">
+      <div [hidden]="NameEl.valid || NameEl.pristine" class="alert alert-danger">
+        <p *ngIf="NameEl.errors != null && NameEl.errors.minlength">Heslo je moc krátké</p>
+        <p *ngIf="NameEl.errors != null && NameEl.errors.maxlength">Heslo je moc dlouhé</p>
+      </div>
+    </div>
+    <br>
+    <div>
       <label for="inputPassword">Popis</label>
       <br>
-      <input name="password" [(ngModel)]="popis" type="text">
-      <br>
-      <br>
 
+      <input name="popis" [(ngModel)]="popis" type="popis" required minlength="5" maxlength="30"
+             #PopisEl="ngModel" id="inputPopis" class="form-control"
+             placeholder="Popis">
+      <div [hidden]="PopisEl.valid || PopisEl.pristine" class="alert alert-danger">
+        <p *ngIf="PopisEl.errors != null && PopisEl.errors.minlength">Heslo je moc krátké</p>
+        <p *ngIf="PopisEl.errors != null && PopisEl.errors.maxlength">Heslo je moc dlouhé</p>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div>
       <label for="inputPassword">skills</label>
       <br>
-      <input name="password" [(ngModel)]="skills" type="text">
-      <div>
-        <button [disabled]="form.invalid" (click)="VytvoritUzivatele()" type="submit">
-          Registrovat
-        </button>
+
+      <input name="skills" [(ngModel)]="skills" type="skills" required minlength="5" maxlength="30"
+             #SkillsEl="ngModel" id="inputSkills" class="form-control"
+             placeholder="skills">
+      <div [hidden]="SkillsEl.valid || SkillsEl.pristine" class="alert alert-danger">
+        <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.minlength">Heslo je moc krátké</p>
+        <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.maxlength">Heslo je moc dlouhé</p>
       </div>
+    </div>
+    <div>
+      <button [disabled]="form.invalid" (click)="VytvoritUzivatele()" type="submit">
+        Registrovat
+      </button>
+    </div>
   </form>
 </div>
 <div *ngIf="Prijmuto">
