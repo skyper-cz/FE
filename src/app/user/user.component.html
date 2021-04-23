@@ -2,14 +2,17 @@
   <h1>Uživatelé</h1>
   <hr>
   <div class="user-card" *ngFor="let user of users">
-    <div class="user-profile-img">
-      <h2>{{user.name.charAt(0)}}</h2>
-    </div>
     <div class="user-info-primal">
-      <p class="">@{{user.nick}}</p>
-      <p>{{user.name}}</p>
-      <p>{{user.age}}</p>
-    </div><br>
+      <div class="user-profile-img" [style.background-image]="'url(' + user.profilePic + ')'">
+        <h2>{{user.name.charAt(0)}}</h2>
+      </div>
+      <div class="user-info-text">
+        <p>@{{user.nick}}</p>
+        <p>{{user.name}}</p>
+        <p>{{user.age}}</p>
+      </div>
+
+    </div>
     <div class="user-info-secondary">
       <p>{{user.description}}</p>
       <p>{{user.skills}}</p>

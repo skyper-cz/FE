@@ -67,6 +67,21 @@
         <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.maxlength">Heslo je moc dlouhé</p>
       </div>
     </div>
+
+    <div>
+      <label for="inputPassword">Profile picture</label>
+      <br>
+
+      <input name="skills" [(ngModel)]="profilePic" type="profilePic" required minlength="5" maxlength="30"
+             #SkillsEl="ngModel" id="inputProfilePic" class="form-control"
+             placeholder="profilePic">
+      <div [hidden]="SkillsEl.valid || SkillsEl.pristine" class="alert alert-danger">
+        <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.minlength">Heslo je moc krátké</p>
+        <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.maxlength">Heslo je moc dlouhé</p>
+      </div>
+    </div>
+
+
     <div>
       <button [disabled]="form.invalid" (click)="createUser()" type="submit">
         Registrovat

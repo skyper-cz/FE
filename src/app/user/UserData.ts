@@ -4,5 +4,6 @@ export interface UserData {
   age: number;
   description: string;
   skills: string;
+  profilePic: string;
 
 }

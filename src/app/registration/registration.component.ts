@@ -15,13 +15,15 @@ export class RegistrationComponent {
   age: number;
   description = '';
   skills = '';
+  profilePic = '';
   Prijmuto = false;
+
 
 
   constructor(private apiService: UserService) {
   }
 
   createUser(): void {
-    this.apiService.registerUser({name: this.name, nick: this.nickname, age: this.age, description: this.description, skills: this.skills});
+    this.apiService.registerUser({name: this.name, nick: this.nickname, age: this.age, description: this.description, skills: this.skills, profilePic: this.profilePic});
   }
 }
