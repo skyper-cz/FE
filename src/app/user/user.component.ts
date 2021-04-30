@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   myMap: Map<number, string> = new Map();
   userService: UserService;
   users: UserData[];
+  currentUser: any;
 
 
   constructor(service: UserService) {
