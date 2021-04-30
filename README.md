@@ -63,3 +63,7 @@ FE styles - Janko
   * Profil přihlášeného uživatele
   * možnost upravit jeho informace
 * [ ] Fabián bude psychicky podporovat (asi)
+
+**Stage 7**
+* [ ] Opravit chyby v FE
+* [ ] komunikace BE a FE
