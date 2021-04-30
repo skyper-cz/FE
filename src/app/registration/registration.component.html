@@ -67,12 +67,9 @@
       <label for="inputSkills">profilePic</label>
       <br>
 
-      <input name="profilePic" [(ngModel)]="profilePic" type="profilePic" required minlength="5" maxlength="30"
-             #profilePicEl="ngModel" id="inputprofilePic" class="form-control"
+      <input name="profilePic" [(ngModel)]="profilePic" type="profilePic" required minlength="5" maxlength="1000"
+             id="inputprofilePic" class="form-control"
              placeholder="profilePic">
-      <div [hidden]="profilePicEl.valid || profilePicEl.pristine" class="alert alert-danger">
-        <p *ngIf="profilePicEl.errors != null && profilePicEl.errors.minlength">Skills je moc krátké</p>
-      </div>
     </div>
     <div>
       <button [disabled]="form.invalid" (click)="createUser()" type="submit">
