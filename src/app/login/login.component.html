@@ -1,1 +1,36 @@
 <p>login works!</p>
+
+<form #form="ngForm">
+  <div>
+    <label for="nick">Nickname</label>
+  </div>
+  <div>
+    <input name="nickname" [(ngModel)]="nick" type="text" required minlength="3" maxlength="10"
+           #UzivatelskeJmenoEl="ngModel" id="nick" placeholder="Nickname">
+    <p *ngIf="UzivatelskeJmenoEl.errors != null && UzivatelskeJmenoEl.errors.minlength">Jméno je moc krátké</p>
+  </div>
+
+
+
+
+  <div>
+    <label for="password">Password</label>
+  </div>
+  <div>
+    <input name="password" [(ngModel)]="password" type="text" required minlength="5" maxlength="30"
+           #HesloEl="ngModel" id="password" placeholder="Password">
+    <p *ngIf="HesloEl.errors != null && HesloEl.errors.minlength">Heslo je moc krátké</p>
+  </div>
+
+
+
+
+
+
+  <div>
+    <button [disabled]="form.invalid" (click)="tryToLogIn()" type="submit">
+      Submit
+    </button>
+    <div>{{message}}</div>
+  </div>
+</form>

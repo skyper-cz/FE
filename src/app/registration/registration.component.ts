@@ -24,6 +24,6 @@ export class RegistrationComponent {
   }
 
   createUser(): void {
-    this.apiService.registerUser({name: this.name, nick: this.nickname, age: this.age, description: this.description, skills: this.skills, profilePic: this.profilePic});
+    this.apiService.registerUser({name: this.name, password: this.heslo, nick: this.nickname, age: this.age, description: this.description, skills: this.skills, profilePic: this.profilePic});
   }
 }

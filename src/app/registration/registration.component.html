@@ -8,7 +8,6 @@
            #UzivatelskeJmenoEl="ngModel" id="inputNick" placeholder="Nickname">
     <div [hidden]="UzivatelskeJmenoEl.valid || UzivatelskeJmenoEl.pristine" class="alert alert-danger">
       <p *ngIf="UzivatelskeJmenoEl.errors != null && UzivatelskeJmenoEl.errors.minlength">Jméno je moc krátké</p>
-      <p *ngIf="UzivatelskeJmenoEl.errors != null && UzivatelskeJmenoEl.errors.maxlength">Jméno je moc dlouhé</p>
     </div>
     <br>
     <br>
@@ -21,7 +20,6 @@
              placeholder="Password">
       <div [hidden]="HesloEl.valid || HesloEl.pristine" class="alert alert-danger">
         <p *ngIf="HesloEl.errors != null && HesloEl.errors.minlength">Heslo je moc krátké</p>
-        <p *ngIf="HesloEl.errors != null && HesloEl.errors.maxlength">Heslo je moc dlouhé</p>
       </div>
     </div>
     <br>
@@ -35,8 +33,7 @@
              #NameEl="ngModel" id="inputName" class="form-control"
              placeholder="Jméno, příjmení">
       <div [hidden]="NameEl.valid || NameEl.pristine" class="alert alert-danger">
-        <p *ngIf="NameEl.errors != null && NameEl.errors.minlength">Heslo je moc krátké</p>
-        <p *ngIf="NameEl.errors != null && NameEl.errors.maxlength">Heslo je moc dlouhé</p>
+        <p *ngIf="NameEl.errors != null && NameEl.errors.minlength">Jmeno je moc krátké</p>
       </div>
     </div>
     <br>
@@ -48,8 +45,7 @@
              #PopisEl="ngModel" id="inputDescription" class="form-control"
              placeholder="Popis">
       <div [hidden]="PopisEl.valid || PopisEl.pristine" class="alert alert-danger">
-        <p *ngIf="PopisEl.errors != null && PopisEl.errors.minlength">Heslo je moc krátké</p>
-        <p *ngIf="PopisEl.errors != null && PopisEl.errors.maxlength">Heslo je moc dlouhé</p>
+        <p *ngIf="PopisEl.errors != null && PopisEl.errors.minlength">Popis je moc krátký</p>
       </div>
     </div>
     <br>
@@ -63,8 +59,7 @@
              #SkillsEl="ngModel" id="inputSkills" class="form-control"
              placeholder="skills">
       <div [hidden]="SkillsEl.valid || SkillsEl.pristine" class="alert alert-danger">
-        <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.minlength">Heslo je moc krátké</p>
-        <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.maxlength">Heslo je moc dlouhé</p>
+        <p *ngIf="SkillsEl.errors != null && SkillsEl.errors.minlength">Skills je moc krátké</p>
       </div>
     </div>
 
@@ -76,8 +71,6 @@
              #SkillsEl="ngModel" id="inputProfilePic" class="form-control"
              placeholder="profilový obrázek (url)">
     </div>
-
-
     <div>
       <button [disabled]="form.invalid" (click)="createUser()" type="submit">
         Registrovat
