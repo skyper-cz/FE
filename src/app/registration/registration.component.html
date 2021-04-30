@@ -2,7 +2,7 @@
   <h1>Registrace</h1>
 
 
-  <form #form="ngForm">
+  <form #form="ngForm" name="registration-form">
     <label for="inputNick">Nickname</label><br>
     <input name="nickname" [(ngModel)]="nickname" type="text" required minlength="3" maxlength="10"
            #UzivatelskeJmenoEl="ngModel" id="inputNick" placeholder="Nickname">
@@ -67,12 +67,18 @@
       <label for="inputSkills">profilePic</label>
       <br>
 
+<<<<<<< Updated upstream
       <input name="profilePic" [(ngModel)]="profilePic" type="profilePic" required minlength="5" maxlength="1000"
              id="inputprofilePic" class="form-control"
              placeholder="profilePic">
+=======
+      <input name="profilePic" [(ngModel)]="profilePic" type="profilePic"
+             #SkillsEl="ngModel" id="inputProfilePic" class="form-control"
+             placeholder="profilový obrázek (url)">
+>>>>>>> Stashed changes
     </div>
     <div>
-      <button [disabled]="form.invalid" (click)="createUser()" type="submit">
+      <button [disabled]="form.invalid" (click)="createUser()" type="submit" routerLink="">
         Registrovat
       </button>
     </div>
