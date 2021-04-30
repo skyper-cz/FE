@@ -11,6 +11,5 @@ export class AppComponent {
   public menu = {
     '/' : 'Home',
     uzivatele: 'Uzivatele',
-    Registrace: 'Registrace',
   };
 }
