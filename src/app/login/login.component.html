@@ -6,9 +6,6 @@
     <label for="inputNick">Nickname</label><br>
     <input name="nickname" [(ngModel)]="nickname" type="text" required minlength="3" maxlength="10"
            #UzivatelskeJmenoEl="ngModel" id="inputNick" placeholder="Nickname">
-    <div [hidden]="UzivatelskeJmenoEl.valid || UzivatelskeJmenoEl.pristine" class="alert alert-danger">
-      <p *ngIf="UzivatelskeJmenoEl.errors != null && UzivatelskeJmenoEl.errors.minlength">Jméno je moc krátké</p>
-    </div>
     <br>
     <br>
     <div>
@@ -18,9 +15,6 @@
       <input name="password" [(ngModel)]="heslo" type="password" required minlength="5" maxlength="30"
              #HesloEl="ngModel" id="inputPassword" class="form-control"
              placeholder="Password">
-      <div [hidden]="HesloEl.valid || HesloEl.pristine" class="alert alert-danger">
-        <p *ngIf="HesloEl.errors != null && HesloEl.errors.minlength">Heslo je moc krátké</p>
-      </div>
     </div>
 
     <div>
