@@ -8,8 +8,8 @@ import {UserService} from "../user.service";
 })
 export class LoginComponent implements OnInit {
 
-  nick = '';
-  password = '';
+  nickname = '';
+  heslo = '';
   message = '';
 
   constructor(private apiService: UserService) { }
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
 
   tryToLogIn(){
-    this.message = this.apiService.isValid(this.nick,this.password);
+    this.message = this.apiService.isValid(this.nickname,this.heslo);
   }
 
 }
