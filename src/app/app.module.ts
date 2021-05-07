@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { LoginComponent } from './login/login.component';
     UserComponent,
     RegistrationComponent,
     LoginComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
