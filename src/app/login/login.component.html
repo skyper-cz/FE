@@ -19,7 +19,7 @@
 
     <div>
       <button [disabled]="form.invalid" (click)="tryToLogIn()" type="submit">
-        Submit
+        <a *ngIf="message=='true'" routerLink="/Editace">Submit</a>
       </button>
       <div>{{message}}</div>
     </div>

@@ -4,7 +4,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {UserComponent} from './user/user.component';
 import {RegistrationComponent} from './registration/registration.component';
-import {LoginComponent} from "./login/login.component";
+import {LoginComponent} from './login/login.component';
+import {EditComponent} from './edit/edit.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: 'uzivatele', component: UserComponent},
   {path: 'Registrace', component: RegistrationComponent},
   {path: 'Login', component: LoginComponent},
-
+  {path: 'Editace', component: EditComponent},
 ];
 
 @NgModule({
