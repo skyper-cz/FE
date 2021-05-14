@@ -30,7 +30,7 @@ export class UserService {
       age: 22,
       skills: "Top messenger spammer a ignorer",
       description: "webíky a bložísky",
-      profilePic: "https://lh3.googleusercontent.com/proxy/YVHrDm_SE_1FDy2hHTHMOOr9bH7TwLpkspEDrb544891upxl2pj8OVFUbj5QPri7PWwVHVBGlpSbnBF6W6Zvso6tLRiHya6bh0IBZf7tijaeYYFYHyE"
+      profilePic: "https://cdn.rohlik.cz/uploads/Jana/mozarella.jpg"
     },
     {
       nick: "Test",
