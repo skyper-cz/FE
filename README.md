@@ -67,4 +67,3 @@ FE styles - Janko
 **Stage 7**
 * [ ] komunikace BE a FE - Janko & Vítek
 * [ ] Nový vzhled  - Mikoláš
-* [ ] Image upload - Láďa
