@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   nickname = '';
   heslo = '';
   message = '';
+  isLogInValid;
 
   constructor(private apiService: UserService) { }
 

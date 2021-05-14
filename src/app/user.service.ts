@@ -49,7 +49,7 @@ export class UserService {
   }
 
   isValid(nick1, password1): string {
-    for (let user of this.users) {
+    for (const user of this.users) {
       if (user.nick == nick1) {
         if (password1 == user.password) {
           return 'true';

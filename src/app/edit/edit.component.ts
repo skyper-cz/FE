@@ -1,15 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from "../user.service";
 
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss']
 })
-export class EditComponent implements OnInit {
+export class EditComponent {
+  title = 'Register';
 
-  constructor() { }
+  nickname = '';
+  heslo = '';
+  name = '';
+  age: number;
+  description = '';
+  skills = '';
+  profilePic = '';
+  Prijmuto = false;
 
-  ngOnInit(): void {
+
+
+  constructor(private apiService: UserService) {
   }
 
+  createUser(): void {
+    this.apiService.registerUser({name: this.name, password: this.heslo, nick: this.nickname, age: this.age, description: this.description, skills: this.skills, profilePic: this.profilePic});
+    let form = document.getElementsByName('registration-form');
+  }
 }
+
