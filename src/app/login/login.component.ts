@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private apiService: UserService) { }
 
   ngOnInit(): void {
+    this.apiService.init();
   }
 
   tryToLogIn(){

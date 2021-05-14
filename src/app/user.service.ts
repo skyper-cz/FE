@@ -2,6 +2,11 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {observable, Observable, of} from 'rxjs';
 import {UserData} from './user/UserData';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import * as http from "http";
 
 @Injectable({
   providedIn: 'root'
@@ -36,8 +41,21 @@ export class UserService {
       description: "webíky a bložísky",
       profilePic: "https://c4.wallpaperflare.com/wallpaper/302/656/898/ship-ocean-battle-atlantic-ocean-clouds-wallpaper-preview.jpg"
     }
-  ];
+    ];
+
   currentUser: any;
+
+  init(): void {
+    http.get('portfolio.cz/users').subscribe({
+      next: data => {
+        this.users = data;
+      },
+      error: error => {
+        console.error('nepodařilo se získat array uživatelů, zkouším znova', error);
+        this.init();
+      }
+    })
+  }
 
   getUsers(): Observable<UserData[]> {
     return of(this.users);
@@ -45,7 +63,9 @@ export class UserService {
 
   registerUser(user: UserData): Observable<void> {
     this.users.push(user);
-    return of();
+    http.post<any>('portfolio.cz/users=?'+user).subscribe(     //todo: přidat platnou ip serveru
+      data => {});                                             //todo: otestovat (vítek má rozbitej wildfly)
+  return of()
   }
 
   isValid(nick1, password1): string {

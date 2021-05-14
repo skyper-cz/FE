@@ -24,6 +24,10 @@ export class RegistrationComponent {
   constructor(private apiService: UserService) {
   }
 
+  ngOnInit(){
+    this.apiService.init();
+  }
+
   createUser(): void {
     this.apiService.registerUser({name: this.name, password: this.heslo, nick: this.nickname, age: this.age, description: this.description, skills: this.skills, profilePic: this.profilePic});
     let form = document.getElementsByName('registration-form');
